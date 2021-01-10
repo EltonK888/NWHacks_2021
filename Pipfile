@@ -10,6 +10,10 @@ django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
 django-environ = "*"
+channels = "*"
+channels-redis = "*"
+celery = "*"
+redis = "*"
 
 [requires]
 python_version = "3.8"
