@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-rou
 import Navbar from "./components/Navbar";
 import VenueCard from "./components/VenueCard";
 import Cards from "./components/Cards";
+import Venue from "./components/Venue";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className="container">
         <Router basename="/">
           <Route path="/" exact component={Cards}/>
-          <Route path="/venue/:venueName"/>
+          <Route path="/venue/:venueName" exact render={(props) => <Venue {...props} />}/>
         </Router>
       </div>
     </div>

@@ -37,6 +37,13 @@
   }
 }
 
-.card-container {
+.cards {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
 }
