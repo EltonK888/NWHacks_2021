@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
@@ -10,6 +11,7 @@ class Venue(models.Model):
     current_music = models.CharField(max_length=100, blank=False, null=True)
     average_age = models.PositiveIntegerField(blank=False, null=True)
     sound_level = models.PositiveIntegerField(default=60, validators=[MinValueValidator(1), MaxValueValidator(100)])
+    fun_factor = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(100)])
 
     def __str__(self):
         return self.name

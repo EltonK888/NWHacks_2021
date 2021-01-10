@@ -14,6 +14,13 @@ channels = "*"
 channels-redis = "*"
 celery = "*"
 redis = "*"
+scikit-learn = "*"
+statsmodels = "*"
+pandas = "*"
+matplotlib = "*"
+numpy = "*"
+scipy = "*"
+sklearn = "*"
 
 [requires]
 python_version = "3.8"
