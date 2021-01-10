@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import VenueCard from "./components/VenueCard";
+import Cards from "./components/Cards";
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
       <Navbar/>
       <div className="container">
         <Router basename="/">
-          <Route path="/"/>
+          <Route path="/" exact component={Cards}/>
+          <Route path="/venue/:venueName"/>
         </Router>
-        <VenueCard/>
       </div>
     </div>
   );
