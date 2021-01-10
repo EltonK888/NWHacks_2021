@@ -5,7 +5,6 @@ from rest_framework.response import Response
 
 from .models import *
 from .serializers import * 
-from .script import regr
 
 
 @api_view(['GET'])
@@ -51,9 +50,6 @@ def add_new_person(request, pk):
             "failure": "Updating venue failed"
         })
 
-@api_view(['GET'])
-def test_regression_model(request):
-    regr.predict()
 
 
 
